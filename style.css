@@ -1,6 +1,6 @@
 body {
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #050B23;
+  background: #0a0a0a; /* Matte black background */
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,6 +10,7 @@ body {
   color: #f1f1f1;
 }
 
+/* Blur background when modal is active */
 body.modal-active .container {
   filter: blur(6px);
   pointer-events: none;
@@ -17,13 +18,13 @@ body.modal-active .container {
 }
 
 .container {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: rgba(15, 15, 15, 0.92);
   padding: 50px;
   border-radius: 18px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(12, 26, 81, 0.6);
   width: 800px;
   min-height: 500px;
   text-align: center;
+  animation: glowLoop 3s infinite alternate ease-in-out;
 }
 
 h1 {
@@ -119,6 +120,7 @@ button:hover {
   transform: scale(1.07);
 }
 
+/* Modal background */
 .modal {
   position: fixed;
   top: 0; left: 0;
@@ -130,13 +132,15 @@ button:hover {
   z-index: 1000;
 }
 
+/* Modal content box */
 .modal-content {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: rgba(15, 15, 15, 0.95);
   padding: 40px;
   border-radius: 18px;
   text-align: center;
   width: 500px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.6);
+  animation: glowLoop 3s infinite alternate ease-in-out;
+  animation-delay: 1s; /* small offset so it feels dynamic */
 }
 
 .modal-content h1 {
@@ -148,11 +152,47 @@ button:hover {
 .modal-content p {
   font-size: 18px;
   margin-bottom: 25px;
-  color: #eee;
+  color: #ccc;
 }
 
 .modal-content button {
   background: linear-gradient(135deg, #28a745, #218838);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
+
+.modal-content button:hover {
+  background: linear-gradient(135deg, #1e7e34, #155d27);
+  transform: scale(1.05);
+}
+
+@keyframes popupFade {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* 🔥 Red ↔ Blue glow animation */
+@keyframes glowLoop {
+  0% {
+    box-shadow: 0 -6px 20px -5px rgba(255, 0, 0, 0.6),
+                0 -10px 40px -8px rgba(255, 0, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 -6px 20px -5px rgba(0, 0, 255, 0.6),
+                0 -10px 40px -8px rgba(0, 0, 255, 0.4);
+  }
+}
+
+
+
+
+
+
 
 

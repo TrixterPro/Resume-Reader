@@ -1,51 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Resume Screener</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Resume Screener</title>
 
-  <!-- Google Fonts: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Link to CSS -->
-  <link rel="stylesheet" href="style.css">
+<!-- Google Fonts-->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- External CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="modal-active">
+<!-- Modal -->
+<div id="welcomeModal" class="modal">
+<div class="modal-content">
+<h1>AI-Powered Resume Screener</h1>
+<p>Welcome! Upload resumes and match them against job descriptions with AI assistance.</p>
+<button id="getStartedBtn">🚀 Get Started</button>
+</div>
+</div>
 
-  <!-- Modal -->
-  <div id="welcomeModal" class="modal">
-    <div class="modal-content">
-      <h1>AI-Powered Resume Screener</h1>
-      <p>Welcome! Upload resumes and match them against job descriptions with AI assistance.</p>
-      <button id="getStartedBtn">🚀 Get Started</button>
-    </div>
-  </div>
-
-  <!-- Main content -->
-  <div class="container">
-    <h1>AI-Powered Resume Screener</h1>
-    <p class="subtitle">Upload resumes and match them against job descriptions with AI assistance</p>
-
-    <div class="form-box">
-      <label>📄 Upload Resume:</label>
-      <div class="upload-wrapper">
-        <label for="resumeUpload" class="upload-label">Choose Resume File</label>
-        <input type="file" id="resumeUpload" class="upload-input" accept=".pdf,.doc,.docx">
-        <div id="fileName" class="file-name">No file selected</div>
-      </div>
-
-      <label for="jobDescription">📝 Job Description:</label>
-      <textarea id="jobDescription" placeholder="Paste job description here..."></textarea>
-
-      <button id="analyzeBtn">Analyze Resume</button>
-    </div>
-  </div>
-
-  <!-- JS file -->
-  <script src="script.js"></script>
+<!-- Main content -->
+<div class="container">
+<h1>AI-Powered Resume Screener</h1>
+<p class="subtitle">Upload resumes and match them against job descriptions with AI assistance</p>
+<div class="form-box">
+<label>📄 Upload Resume:</label>
+<div class="upload-wrapper">
+<label for="resumeUpload" class="upload-label">Choose Resume File</label>
+<input type="file" id="resumeUpload" class="upload-input" accept=".pdf,.doc,.docx">
+<div id="fileName" class="file-name">No file selected</div>
+</div>
+<label for="jobDescription">📝 Job Description:</label>
+<textarea id="jobDescription" placeholder="Paste job description here..."></textarea>
+<button id="analyzeBtn">Analyze Resume</button>
+</div></div>
+<script src="script.js"></script>
 </body>
 </html>
+
 
 
 
