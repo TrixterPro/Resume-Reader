@@ -1,2 +1,158 @@
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #050B23;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #f1f1f1;
+}
+
+body.modal-active .container {
+  filter: blur(6px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.container {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 50px;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(12, 26, 81, 0.6);
+  width: 800px;
+  min-height: 500px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #eee;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  font-size: 18px;
+}
+
+label {
+  font-weight: 600;
+  color: #f1f1f1;
+}
+
+textarea {
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #444;
+  font-size: 16px;
+  resize: none;
+  height: 150px;
+  background: #ffffff;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+}
+
+.upload-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.upload-label {
+  display: inline-block;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.upload-label:hover {
+  background: linear-gradient(135deg, #218838, #1c6d31);
+  transform: scale(1.05);
+}
+
+.upload-input {
+  display: none;
+}
+
+.file-name {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #ccc;
+  font-style: italic;
+}
+
+button {
+  padding: 16px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0056b3, #003f88);
+  transform: scale(1.07);
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 40px;
+  border-radius: 18px;
+  text-align: center;
+  width: 500px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.6);
+}
+
+.modal-content h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.modal-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #eee;
+}
+
+.modal-content button {
+  background: linear-gradient(135deg, #28a745, #218838);
+}
 
 
