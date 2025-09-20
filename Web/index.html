@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Resume Screener</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="modal-active">
+
+<div id="welcomeModal" class="modal">
+<div class="modal-content">
+<h1>AI-Powered Resume Screener</h1>
+<p>Welcome! Upload resumes and match them against job descriptions with AI assistance.</p>
+<button id="getStartedBtn">🚀 Get Started</button>
+</div>
+</div>
+
+
+<div class="container">
+<h1>AI-Powered Resume Screener</h1>
+<p class="subtitle">Upload resumes and match them against job descriptions with AI assistance</p>
+
+<div class="form-box">
+<label>📄 Upload Resume(s):</label>
+
+<div class="upload-wrapper">
+        
+<label for="resumeUpload" class="upload-label">Choose Resume Files</label>
+        <input type="file" id="resumeUpload" class="upload-input" accept=".pdf,.doc,.docx" multiple>
+        <div id="fileName" class="file-name">No files selected</div>
+      </div>
+
+      <label for="jobDescription">📝 Job Description:</label>
+      <textarea id="jobDescription" placeholder="Paste job description here..."></textarea>
+
+      
+      <button id="analyzeBtn">Analyze Resumes</button>
+    </div>
+
+    
+    <div id="analysisResult" class="result-box">
+      <p>Results will appear here after analysis...</p>
+</div>
+</div>
+
+  
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
